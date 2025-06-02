@@ -64,14 +64,14 @@ def consultarBanco():
     """) 
     while True:
 
-        with open("medias.txt", "r") as arquivo:
+        with open("medias.csv", "r") as arquivo:
             linhas = sum(1 for _ in arquivo)
 
         print(f"Total de dias Armazenados: {linhas}")
         
         match int(input("-> ")):
             case 1:
-                with open("medias.txt", "r") as arquivo:
+                with open("medias.csv", "r") as arquivo:
                     print("--- Níveis Médios do Rio ---\n")
                     for i in range(linhas):
                         valor = arquivo.readline().strip()
